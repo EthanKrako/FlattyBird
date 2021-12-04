@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ public class PipeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        temps = delai;
+        
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class PipeSpawner : MonoBehaviour
         print(Time.deltaTime);
         temps -= Time.deltaTime;
         if(isPlaying && (temps < 0)) {
-            Instantiate(pipe, this.transform);
+            Instantiate(pipe, new Vector3(transform.position.x,transform.position.y + Random.Range(-5, 5),transform.position.z), new Quaternion());
             temps += delai;
         }
     }
