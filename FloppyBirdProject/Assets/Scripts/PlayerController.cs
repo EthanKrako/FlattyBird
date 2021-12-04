@@ -6,8 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int jumpForce;
+    public CapsuleCollider2D hitbox;
 
     private bool isJumping = false;
+
+    public ParticleSystem particle;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +35,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate() {
         
     }
+    
+    private void OnCollisionEnter2D(Collision2D other) {
+        this.enabled = false;
+    }
 
     void Jump(Rigidbody2D rb) {
         rb.velocity = new Vector2(0, jumpForce);
+        particle.Clear();
+        particle.Play();
     }
 }
