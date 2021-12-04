@@ -6,17 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int jumpForce;
-    public CapsuleCollider2D hitbox;
 
     private bool isJumping = false;
 
     public ParticleSystem particle;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -37,7 +30,15 @@ public class PlayerController : MonoBehaviour
     }
     
     private void OnCollisionEnter2D(Collision2D other) {
+        // Stop all the other scripts for the gameover screen
         this.enabled = false;
+        var pipes = FindObjectsOfType<PipeScript>();
+        foreach (var item in pipes)
+        {
+            item.enabled = false;
+        }
+        var spawner = FindObjectOfType<PipeSpawner>();
+        spawner.enabled = false;
     }
 
     void Jump(Rigidbody2D rb) {

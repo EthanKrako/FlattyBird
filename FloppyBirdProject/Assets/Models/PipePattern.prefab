@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -3535099856844855204}
   - component: {fileID: 7079316183703468598}
   - component: {fileID: 4212277709440566957}
+  - component: {fileID: 4933114896258598336}
   m_Layer: 0
   m_Name: PipePattern
   m_TagString: Untagged
@@ -100,6 +101,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.2477274, y: 15.3436775}
+  m_EdgeRadius: 0
+--- !u!61 &4933114896258598336
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7534206505007908829}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.92451805, y: -0.030311584}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.36344516, y: 4.6980743}
   m_EdgeRadius: 0
 --- !u!1001 &2065109414155285643
 PrefabInstance:
