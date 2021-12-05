@@ -7,7 +7,7 @@ public class GameEventsPoints : MonoBehaviour
 {
     public static GameEventsPoints current;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         current = this;
     }
