@@ -18,10 +18,4 @@ public class CompteurScript : MonoBehaviour
         num++;
         text.text = num.ToString();
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-    }
 }

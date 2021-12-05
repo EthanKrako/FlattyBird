@@ -7,11 +7,6 @@ public class PipeScript : MonoBehaviour
 {
     public int speed = 4;
     public float livingTime = 15;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void FixedUpdate()
